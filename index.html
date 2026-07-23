@@ -342,52 +342,52 @@
 /* ================= Industry content library (all mock/demo data) ================= */
 const INDUSTRIES = {
   manufacturing: {
-    noun:'components', region:'the US',
+    noun:'components', region:'the US', dealSize:{min:8000,max:15000}, closeRate:0.18,
     slugs:['/products/high-pressure-ball-valves-oil-gas','/guides/how-to-size-industrial-control-valves','/products/stainless-steel-gate-valves-ansi','/services/custom-manufacturing-low-moq','/guides/api-6d-vs-api-600-standards','/products/cryogenic-valves-lng','/compare/domestic-vs-imported-suppliers','/services/oem-supply-for-distributors','/guides/preventive-maintenance-checklist','/resources/material-certification-guide'],
     queries:['best {noun} manufacturers in {region} with low MOQs','ISO-certified industrial valve suppliers for oil and gas','how to choose between API 6D and API 600 valves','custom {noun} manufacturer with fast lead times','reliable OEM supplier for stainless steel {noun}','cryogenic valve suppliers for LNG projects','US-based alternatives to imported industrial {noun}','preventive maintenance schedule for industrial valves']
   },
   distribution: {
-    noun:'industrial supplies', region:'the Midwest',
+    noun:'industrial supplies', region:'the Midwest', dealSize:{min:3000,max:7000}, closeRate:0.20,
     slugs:['/catalog/mro-supplies-bulk-pricing','/services/same-day-fulfillment','/guides/vendor-consolidation-savings','/catalog/safety-equipment-osha-compliant','/services/vmi-inventory-programs','/guides/procurement-cost-reduction','/catalog/fasteners-and-fittings-bulk','/services/kitting-and-assembly','/compare/distributor-vs-direct-buying','/resources/lead-time-tracker'],
     queries:['best {noun} distributors in {region} with same-day shipping','MRO supplier with vendor-managed inventory programs','how to consolidate vendors and cut procurement costs','bulk fasteners distributor with net-30 terms','OSHA-compliant safety equipment suppliers','distributors offering kitting and assembly services','wholesale {noun} with transparent bulk pricing','best VMI programs for mid-size manufacturers']
   },
   saas: {
-    noun:'software', region:'North America',
+    noun:'software', region:'North America', dealSize:{min:3000,max:9000}, closeRate:0.15,
     slugs:['/product/workflow-automation-platform','/pricing','/guides/crm-migration-checklist','/compare/us-vs-top-competitors','/customers/case-study-40-percent-time-saved','/product/integrations-directory','/guides/roi-calculator-automation','/security/soc2-compliance','/guides/onboarding-best-practices','/blog/ai-agents-for-ops-teams'],
     queries:['best workflow automation tools for small teams','affordable CRM alternatives with easy migration','SOC 2 compliant {noun} for regulated industries','tools that integrate with Slack and HubSpot','how to calculate ROI on automation software','best AI agents for operations teams in {region}','software with fastest onboarding for SMBs','top-rated alternatives to legacy enterprise tools']
   },
   finance: {
-    noun:'financial advisory', region:'India',
+    noun:'financial advisory', region:'India', dealSize:{min:1500,max:4000}, closeRate:0.12,
     slugs:['/service/goal-based-investing-platform','/service/credit-card-rewards-optimization','/service/expert-curated-mutual-fund-portfolios','/service/unbiased-insurance-advisory','/service/best-mutual-fund-platform-research','/guides/tax-saving-investments-80c','/guides/emergency-fund-calculator','/service/retirement-planning-tools','/compare/direct-vs-regular-mutual-funds','/guides/first-time-investor-checklist'],
     queries:['best goal-based investing platform for beginners in {region}','how to optimize credit card rewards for everyday spending','expert-curated mutual fund portfolios for long-term goals','unbiased insurance advisory without commissions','direct vs regular mutual funds — which is better','best tax-saving investment options under 80C','how much emergency fund do I need','retirement planning tools for salaried professionals']
   },
   healthcare: {
-    noun:'clinics', region:'Texas',
+    noun:'clinics', region:'Texas', dealSize:{min:200,max:600}, closeRate:0.35,
     slugs:['/services/telehealth-primary-care','/services/same-week-specialist-appointments','/guides/insurance-accepted-plans','/services/preventive-health-screenings','/guides/choosing-a-primary-care-doctor','/services/chronic-care-management','/locations/find-a-clinic-near-you','/guides/annual-checkup-what-to-expect','/services/mental-health-support','/resources/patient-portal-guide'],
     queries:['best primary care {noun} near me that accept my insurance','telehealth providers with same-week appointments','how to choose a primary care doctor','clinics offering preventive health screenings in {region}','chronic care management programs near me','affordable mental health support options','what to expect at an annual checkup','best-rated family {noun} with online booking']
   },
   ecommerce: {
-    noun:'products', region:'the US',
+    noun:'products', region:'the US', dealSize:{min:60,max:150}, closeRate:0.55,
     slugs:['/collections/bestsellers','/products/eco-friendly-starter-kit','/guides/sizing-and-fit-guide','/compare/us-vs-big-brand-alternatives','/reviews/customer-stories','/guides/care-and-maintenance','/collections/gift-bundles','/pages/shipping-and-returns','/guides/materials-sourcing-transparency','/blog/behind-the-brand'],
     queries:['best sustainable {noun} brands with free returns','affordable alternatives to big-name brands','gift bundles under $50 with fast shipping','brands with transparent materials sourcing','top-rated {noun} according to customer reviews','how to choose the right size when buying online','eco-friendly {noun} made in {region}','small brands worth supporting this year']
   },
   logistics: {
-    noun:'freight', region:'the US',
+    noun:'freight', region:'the US', dealSize:{min:2500,max:6000}, closeRate:0.22,
     slugs:['/services/ltl-freight-quotes','/services/cross-border-shipping-mexico','/guides/freight-class-calculator','/services/warehousing-and-3pl','/guides/reduce-shipping-costs-smb','/services/real-time-shipment-tracking','/compare/broker-vs-asset-carrier','/guides/customs-clearance-checklist','/services/expedited-freight','/resources/fuel-surcharge-index'],
     queries:['best LTL {noun} brokers for small businesses','cross-border shipping to Mexico — best providers','how to calculate freight class for my shipment','affordable 3PL warehousing in {region}','how SMBs can reduce shipping costs','freight companies with real-time tracking APIs','broker vs asset-based carrier — which to choose','expedited freight services with guaranteed delivery']
   },
   legal: {
-    noun:'law firms', region:'California',
+    noun:'law firms', region:'California', dealSize:{min:1500,max:5000}, closeRate:0.20,
     slugs:['/practice/business-formation-llc','/practice/contract-review-flat-fee','/guides/trademark-registration-process','/practice/employment-law-for-startups','/guides/nda-template-explained','/practice/immigration-visas-founders','/compare/flat-fee-vs-hourly-billing','/guides/when-to-hire-a-lawyer','/practice/ip-protection-startups','/resources/free-consultation'],
     queries:['best {noun} for startup formation with flat fees','how much does trademark registration cost','contract review services with fast turnaround','employment law basics every founder should know','immigration lawyers for startup founders in {region}','flat fee vs hourly billing for legal work','when does a small business need a lawyer','IP protection strategies for early-stage startups']
   },
   realestate: {
-    noun:'properties', region:'Austin',
+    noun:'properties', region:'Austin', dealSize:{min:8000,max:18000}, closeRate:0.08,
     slugs:['/listings/homes-under-500k','/guides/first-time-buyer-checklist','/services/sell-your-home-fast','/guides/mortgage-pre-approval-steps','/neighborhoods/best-school-districts','/services/investment-property-analysis','/guides/closing-costs-explained','/listings/new-construction','/guides/rent-vs-buy-calculator','/services/free-home-valuation'],
     queries:['best neighborhoods in {region} for families','first-time home buyer checklist and steps','how to get pre-approved for a mortgage','homes under 500k in top school districts','is it better to rent or buy right now','investment {noun} with best rental yields','what closing costs should I expect','agents offering free home valuations near me']
   },
   homeservices: {
-    noun:'contractors', region:'Phoenix',
+    noun:'contractors', region:'Phoenix', dealSize:{min:400,max:900}, closeRate:0.35,
     slugs:['/services/hvac-repair-same-day','/services/plumbing-emergency-24-7','/guides/ac-maintenance-checklist','/services/electrical-panel-upgrades','/guides/how-much-does-hvac-replacement-cost','/services/water-heater-installation','/reviews/verified-customer-reviews','/guides/signs-you-need-a-new-ac','/services/duct-cleaning','/financing/0-percent-options'],
     queries:['best HVAC {noun} near me with same-day service','24/7 emergency plumbers in {region}','how much does HVAC replacement cost in 2026','signs your AC needs replacing vs repair','licensed electricians for panel upgrades','water heater installation cost and options','AC maintenance checklist before summer','home service companies with 0% financing']
   }
@@ -503,11 +503,12 @@ function generate(){
   });
 
   // stats
-  const citations = Math.round(totalVisits*(3.1+rG()*0.9));
   const pagesCited = Math.min(ind.slugs.length + Math.floor(rG()*40), 8+Math.floor(rG()*60));
   const conversions = Math.round(totalVisits*(0.048+rG()*0.02));
+  const revLow = Math.round(conversions*ind.closeRate*ind.dealSize.min);
+  const revHigh = Math.round(conversions*ind.closeRate*ind.dealSize.max);
 
-  state.data = {labels,series,model,growth,qs,pages,totalVisits,citations,pagesCited,conversions};
+  state.data = {labels,series,model,growth,qs,pages,totalVisits,pagesCited,conversions,revLow,revHigh};
 }
 
 /* ================= Rendering ================= */
@@ -528,15 +529,15 @@ function countUp(el, target, dur){
 
 function renderStats(){
   const d = state.data;
-  // Order: Leads first, then AI visits, then citations detected
+  // Order: Leads, AI visits, estimated revenue influence (range — industry deal size varies too much for a point estimate)
   const items = [
     ['Leads from AI', d.conversions, '↑ '+Math.round(d.growth*0.46)+'% — people who reached out'],
     ['Visits from AI', d.totalVisits, '↑ '+d.growth+'% — sent to your site'],
-    ['Times AI mentioned you', d.citations, '↑ '+Math.round(d.growth*0.78)+'% — in real answers']
+    ['Estimated revenue influence', '$'+fmt(d.revLow)+'–$'+fmt(d.revHigh), '↑ '+Math.round(d.growth*0.46)+'% — based on leads × close rate × deal size']
   ];
   document.getElementById('statsRow').innerHTML = items.map(([l,v,dd],i)=>`
-    <div class="stat fade-in" style="animation-delay:${i*0.06}s"><div class="stat-label">${l}</div><div class="stat-value" data-target="${v}">0</div><div class="stat-delta">${dd}</div></div>`).join('');
-  document.querySelectorAll('#statsRow .stat-value').forEach(el=>{
+    <div class="stat fade-in" style="animation-delay:${i*0.06}s"><div class="stat-label">${l}</div><div class="stat-value"${typeof v==='number'?` data-target="${v}"`:''}>${typeof v==='number'?'0':v}</div><div class="stat-delta">${dd}</div></div>`).join('');
+  document.querySelectorAll('#statsRow .stat-value[data-target]').forEach(el=>{
     const t = parseInt(el.dataset.target);
     if(matchMedia('(prefers-reduced-motion: reduce)').matches){ el.textContent = t.toLocaleString(); }
     else countUp(el, t, 1200);
