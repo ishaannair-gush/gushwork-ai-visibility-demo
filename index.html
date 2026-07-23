@@ -507,7 +507,7 @@ function generate(){
   const conversions = Math.round(totalVisits*(0.048+rG()*0.02));
   const revLow = Math.round(conversions*ind.closeRate*ind.dealSize.min);
   const revHigh = Math.round(conversions*ind.closeRate*ind.dealSize.max);
-  const revAvg = Math.round((revLow+revHigh)/2);
+  const revAvg = Math.min(Math.round((revLow+revHigh)/2), 400000);
 
   state.data = {labels,series,model,growth,qs,pages,totalVisits,pagesCited,conversions,revLow,revHigh,revAvg};
 }
