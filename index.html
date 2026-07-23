@@ -507,8 +507,9 @@ function generate(){
   const conversions = Math.round(totalVisits*(0.048+rG()*0.02));
   const revLow = Math.round(conversions*ind.closeRate*ind.dealSize.min);
   const revHigh = Math.round(conversions*ind.closeRate*ind.dealSize.max);
+  const revAvg = Math.round((revLow+revHigh)/2);
 
-  state.data = {labels,series,model,growth,qs,pages,totalVisits,pagesCited,conversions,revLow,revHigh};
+  state.data = {labels,series,model,growth,qs,pages,totalVisits,pagesCited,conversions,revLow,revHigh,revAvg};
 }
 
 /* ================= Rendering ================= */
@@ -529,11 +530,11 @@ function countUp(el, target, dur){
 
 function renderStats(){
   const d = state.data;
-  // Order: Leads, AI visits, estimated revenue influence (range — industry deal size varies too much for a point estimate)
+  // Order: Leads, AI visits, estimated revenue influence
   const items = [
     ['Leads from AI', d.conversions, '↑ '+Math.round(d.growth*0.46)+'% — people who reached out'],
     ['Visits from AI', d.totalVisits, '↑ '+d.growth+'% — sent to your site'],
-    ['Estimated revenue influence', '$'+fmt(d.revLow)+'–$'+fmt(d.revHigh), '↑ '+Math.round(d.growth*0.46)+'% — based on leads × close rate × deal size']
+    ['Estimated revenue influence', '$'+fmt(d.revAvg), '↑ '+Math.round(d.growth*0.46)+'% — influenced by AI-driven traffic']
   ];
   document.getElementById('statsRow').innerHTML = items.map(([l,v,dd],i)=>`
     <div class="stat fade-in" style="animation-delay:${i*0.06}s"><div class="stat-label">${l}</div><div class="stat-value"${typeof v==='number'?` data-target="${v}"`:''}>${typeof v==='number'?'0':v}</div><div class="stat-delta">${dd}</div></div>`).join('');
