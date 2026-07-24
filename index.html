@@ -69,6 +69,7 @@
   .setup-inner{max-width:1120px;margin:0 auto}
   .setup h1{font-family:var(--display);font-weight:680;font-size:27px;color:#fff;letter-spacing:-.4px}
   .setup p{color:#a9c4f2;font-size:13.5px;margin-top:5px}
+  .setup-desc-short{display:none}
   .setup-form{display:flex;gap:10px;margin-top:18px;flex-wrap:wrap}
   .input-wrap{position:relative;flex:2;min-width:240px}
   .input-wrap .prefix{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--faint);font-size:13.5px;pointer-events:none}
@@ -231,6 +232,10 @@
     .brand-tag,.live-pill{display:none}
     .hero-number{font-size:34px}
     .rank-pill{display:none}
+    .setup-desc-full{display:none}
+    .setup-desc-short{display:block}
+    .setup-form{flex-direction:column;align-items:stretch}
+    .input-wrap,.setup select,.setup button{flex:none;width:100%;min-width:0}
   }
   @media(max-width:480px){
     .setup{padding:26px 16px 24px}
@@ -275,7 +280,8 @@
 <div class="setup">
   <div class="setup-inner">
     <h1>See how AI search sends buyers to your site</h1>
-    <p>Enter any website and industry — we'll show citations, searches, and traffic attributed to ChatGPT, Claude, Perplexity, Gemini and Grok.</p>
+    <p class="setup-desc-full">Enter any website and industry — we'll show citations, searches, and traffic attributed to ChatGPT, Claude, Perplexity, Gemini and Grok.</p>
+    <p class="setup-desc-short">See where ChatGPT, Claude, Perplexity, Gemini and Grok send you customers.</p>
     <div class="setup-form">
       <div class="input-wrap">
         <span class="prefix">https://</span>
